@@ -1,0 +1,42 @@
+---
+import TopBar from "../componets/top-bar.astro";
+import Mainlaayout from "../layouts/Mainlaayout.astro";
+---
+<Mainlaayout title="Projects"></Mainlaayout>
+<html>
+    <header>
+        <TopBar></TopBar>
+      </header>
+      <main class="container mx-auto px-4 py-4">
+            <div class="text-center text-white py-32">
+                <h1 class="text-4xl md:text-5xl font-bold transition-transform ease-in-out hover:scale-110 hover:text-cyan-200 cursor-pointer duration-300">Projects</h1>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="rounded-lg shadow-lg p-6 text-white border-2">
+                        <div class="flex flex-col sm:flex-row items-center mb-4">
+                            <img src="thumbnails/python.png" alt="Python logo" class="w-24 h-24 mb-4 sm:mb-0 sm:mr-6">
+                            <a href="https://github.com/Chirag-Jamariya/college-feedback-system-" ><h2 class="text-2xl sm:text-3xl font-semibold text-center sm:text-left transition-transform ease-in-out hover:scale-110 hover:text-cyan-200 cursor-pointer duration-300">College Review System</h2></a>
+                        </div>
+                        <p class="text-lg leading-relaxed mb-4">
+                        A comprehensive platform that gathers and maintains feedback about college facilities, including hostels, faculty, mess, classrooms, and more.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                        Developed using Python with Tkinter for the graphical user interface and MySQL for the database.
+                        </p>
+                </div>
+                <div class="rounded-lg shadow-lg p-6 text-white border-2">
+                        <div class="flex flex-col sm:flex-row items-center mb-4">
+                            <img src="thumbnails/discord.png" alt="Discord logo" class="w-24 h-24 mb-4 sm:mb-0 sm:mr-6">
+                            <a href="https://github.com/Chirag-Jamariya/Discord-bot"><h2 class="text-2xl sm:text-3xl font-semibold text-center sm:text-left transition-transform ease-in-out hover:scale-110 hover:text-cyan-200 cursor-pointer duration-300">BrainRot</h2></a>
+                        </div>
+                        <p class="text-lg leading-relaxed mb-4">
+                            This is a project about a Discord bot that keeps the community abreast of upcoming CTF challenges and hackathons. The bot will be set to retrieve daily updates every 24 hours to post in a dedicated Discord channel so users never miss an opportunity to participate in cybersecurity competitions or coding events.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            Built on top of Python because it can support automation tasks quite effectively and robustly, this bot utilizes dblite to handle lightweight database management for the efficient storage and retrieval of event information.
+                        </p>
+                </div>
+            </div>
+      </main>
+</html>
+

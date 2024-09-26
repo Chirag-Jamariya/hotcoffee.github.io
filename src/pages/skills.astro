@@ -1,0 +1,232 @@
+---
+import Mainlaayout from "../layouts/Mainlaayout.astro"
+import TopBar from "../componets/top-bar.astro"
+---
+<Mainlaayout title="Skills">
+    
+</Mainlaayout>
+<html>
+    <body class="h-screen w-screen">
+        <header><TopBar></TopBar></header>
+        <div class="flex justify-center items-center text-white">
+            <p class="text-6xl my-24 transition-transform ease-in-out hover:scale-105 cursor-pointer">My Skills</p>
+        </div>
+        <section class="flex flex-row flex-wrap flex-1 text-white py-4 ">
+            <div id="kills" class="flex flex-row flex-1 gap-8">
+                <div id="main" class="text-white flex flex-col justify-top items-center mx-8 flex-1 flex-grow min-w-72">
+                    <p class="text-5xl">Web-Tools</p>
+                    <div class="flex flex-row my-4">
+                        <div class="mx-4">
+                            <img src="thumbnails/html-5.png" alt="Html-logo">
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>Html</p>
+    
+                            </div>  
+                    </div>
+                    <div class="flex flex-row my-4">
+                        <div class="mx-4">
+                            <img src="thumbnails/css-3.png" alt="Css-logo" >
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>Css</p>
+    
+                            </div>  
+                    </div>
+                    <div class="flex flex-row my-4">
+                        <div class="mx-4">
+                            <img src="thumbnails/js.png" alt="Javascript-logo" >
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>JavaScript</p>
+    
+                            </div>  
+                    </div>
+                    <div class="flex flex-row my-4">
+                        <div class="mx-4">
+                            <img src="thumbnails/typescript.png" alt="TypeScript-logo" >
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>TypeScript</p>
+    
+                            </div>  
+                    </div>
+                    <div class="flex flex-row my-4">
+                        <div class="mx-4">
+                            <img src="thumbnails/physics.png" alt="React-logo" >
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>React</p>
+    
+                            </div>  
+                    </div>
+                </div>
+                <div id="main" class="text-white flex flex-col justify-top items-center mx-8 flex-1 flex-grow min-w-72">
+                    <p class="text-5xl">Languages</p>
+                    <div class="flex flex-row my-4 justify-center items-center">
+                        <div class="mx-4">
+                            <img src="thumbnails/python.png" alt="Python-logo">
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>Python</p>
+    
+                            </div>  
+                    </div>
+                    <div class="flex flex-row my-4 justify-center items-center">
+                        <div class="mx-4">
+                            <img src="thumbnails/java.png" alt="Java-logo">
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>Java</p>
+    
+                            </div>  
+                    </div>
+                    <div class="flex flex-row my-4 justify-center items-center">
+                        <div class="mx-4">
+                            <img src="thumbnails/c.png" alt="c-logo" >
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>C</p>
+    
+                            </div>  
+                    </div>
+                    <div class="flex flex-row my-4 justify-center items-center">
+                        <div class="mx-4">
+                            <img src="thumbnails/c++.png" alt="C++-logo" >
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>C++</p>
+    
+                            </div>  
+                    </div>
+                </div>
+                <div id="main" class="text-white flex flex-col justify-top items-center mx-8 flex-1 flex-grow min-h-96 min-w-72">
+                    <p class="text-5xl">Database</p>
+                    <div class="flex flex-row my-4">
+                        <div class="mx-4">
+                            <img src="thumbnails/mongodb.png" alt="MongoDb-logo" >
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>MongoDb</p>
+    
+                            </div>  
+                    </div>
+                    <div class="flex flex-row my-4">
+                        <div class="mx-4">
+                            <img src="thumbnails/mysql.png" alt="mysql-logo">
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>MySql</p>
+    
+                            </div>  
+                    </div>
+                </div>
+                <div id="main" class="text-white flex flex-col justify-top items-center mx-8 flex-1 flex-grow min-h-96 min-w-72">
+                    <p class="text-5xl">Tools&Other</p>
+                    <div class="flex flex-row my-4">
+                        <div class="mx-4">
+                            <img src="thumbnails/git.png" alt="git-logo">
+                        </div>
+                        <div class="flex justify-center items-center text-2xl">
+                            <p>Git</p>
+    
+                            </div>  
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </body>
+</html>
+<style>
+    img{
+        width: 65px;
+        border-radius: 9999px;
+        object-fit: cover;
+        
+    }
+    img:hover{
+        cursor: pointer;
+    }
+    #main {
+        border: 5px double #ffffff; 
+        border-radius: 15px; 
+        height:600px
+        
+
+    }
+    p{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        transition: 0.3s ease-in-out;
+    }
+    p:hover{
+        cursor: pointer;
+        color: #9ee2f3;
+        transform: scale(1.1);
+
+    }
+    @media (max-width: 1024px) {
+        section {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text-6xl {
+            font-size: 3rem; 
+        }
+
+        .text-5xl {
+            font-size: 2.5rem;
+        }
+
+        img {
+            width: 50px;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .text-6xl {
+            font-size: 2.5rem;
+        }
+
+        .text-5xl {
+            font-size: 2rem;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .text-6xl {
+            font-size: 2rem;
+        }
+
+        .text-5xl {
+            font-size: 1.5rem;
+        }
+
+        img {
+            width: 50px;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    @media (max-width: 1270px) {
+        #kills {
+            flex-direction: column; 
+            align-items: center;
+        }
+    }
+
+
+
+</style>

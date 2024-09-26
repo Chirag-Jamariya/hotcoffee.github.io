@@ -1,0 +1,117 @@
+---
+import TopBar from "../componets/top-bar.astro"
+import Mainlaayout from "../layouts/Mainlaayout.astro"
+---
+<Mainlaayout title="Home"></Mainlaayout>
+<html>
+  <body>
+    <header><TopBar></header>
+    <main >
+      <section class="about">
+        <img src="thumbnails/Untitled1.jpg" alt="ProfileImage">
+        <article class="text-white">
+          <p class="text-3xl mb-3">Hi, I'm <span class="font-bold">Chirag Jamariya</span></p>
+          <div class="console-container">
+            <span id="text"></span>
+            <div class="console-underscore" id="console">&nbsp;</div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  main {
+    margin: 0 auto;
+    max-width: 1020px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    gap: 100px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about > img {
+    width: 350px;
+    border-radius:100%;
+    object-fit: center;
+    height: 350px;
+  }
+
+  .about > article {
+    gap: 20px;
+  }
+
+  .console-container {
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  .console-underscore {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: transparent;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+</style>
+
+<script>
+  const textElement = document.getElementById('text');
+  const consoleElement = document.getElementById('console');
+
+  const textsToType = [
+    'I\'m a Full Stack Developer ',
+    'I\'m a Discord Bot Developer ',
+    'I\'m a Python Developer ' 
+  ];
+  const typingSpeed = 50;
+  const delayBetweenTexts = 2000; 
+
+  let textIndex = 0;
+  let currentTextIndex = 0;
+
+  function typeText() {
+    if (textIndex < textsToType[currentTextIndex].length) {
+      textElement.textContent = textsToType[currentTextIndex].substring(0, textIndex);
+      textIndex++;
+      setTimeout(typeText, typingSpeed);
+    } else {
+      setTimeout(() => {
+        textIndex = 0;
+        currentTextIndex = (currentTextIndex + 1) % textsToType.length;
+        typeText();
+      }, delayBetweenTexts);
+    }
+  }
+
+  typeText();
+</script>

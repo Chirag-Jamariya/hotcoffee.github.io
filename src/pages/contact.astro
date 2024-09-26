@@ -1,0 +1,74 @@
+---
+import Mainlaayout from "../layouts/Mainlaayout.astro";
+import TopBar from "../componets/top-bar.astro";
+---
+<Mainlaayout title="Contact"></Mainlaayout>
+<html>
+    <head></head>
+    <body>
+        <header><TopBar></TopBar></header>
+        <main>
+            <section class=" z-10 text-white flex flex-col">
+                <div class="gap-5">
+                    <p class="my-3 text-5xl" id="text"><span class="font-bold">Hello! </span>I hope you got to know about me.</p>
+                    <p class="my-3 text-5xl"id="text">If you want to contact me</p>
+                    <p class="my-3 text-5xl"id="text">Here are some ways</p>
+                </div>
+                <div class="flex flex-row justify-around my-3" id="connection">
+                    <div class="flex flex-row justify-center items-center gap-5">
+                        <a href="https://github.com/Chirag-Jamariya" class=""><img src="thumbnails/github.png" class=""></a>
+                        <a href="https://github.com/Chirag-Jamariya" class=""><p class="text-2xl">Github</p></a>
+                    </div>
+                    <div class="flex flex-row justify-center items-center gap-5">
+                        <a href="https://www.linkedin.com/in/chirag-jamariya-b57876289/" class=""><img src="thumbnails/link1.png" class=""></a>
+                        <a href="https://www.linkedin.com/in/chirag-jamariya-b57876289/" class=""><p class="text-2xl">LinkedIn</p></a>
+                    </div>
+                    <div class="flex flex-row justify-center items-center gap-5">
+                        <a href="https://discord.com/invite/dy3yQfvY" class="" ><img src="thumbnails/discord.png" class=""></a>
+                        <a href="https://discord.com/invite/dy3yQfvY"><p class="text-2xl">Discord</p></a>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+    </body>
+</html>
+<style>
+    main {
+      margin: 0 auto;
+      max-width: 1020px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center; 
+      height: 100vh; 
+      gap: 100px;
+    }
+    img{
+        width: 70px;
+        border-radius: 100%
+        
+    }
+
+    @media(max-width:768px){
+        #connection{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            justify-content: center;
+            align-items: center;
+        }
+        #text{
+            font-size: 2rem;
+        }
+    }
+    @media(max-width:500px){
+        p{
+            font-size: 1rem;
+        }
+    }
+
+</style>
