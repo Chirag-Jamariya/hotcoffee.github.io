@@ -10,5 +10,6 @@ import icon from 'astro-icon';
 export default defineConfig({
   integrations: [tailwind(), react(), icon()],
   site: 'https://Chirag-Jamariya.github.io',
-  base: '/hotcoffee.github.io/'
+  base: '/hotcoffee.github.io/',
+  trailingSlash: 'always',
 });
